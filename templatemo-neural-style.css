@@ -842,8 +842,13 @@ nav {
     bottom: 0;
     background: linear-gradient(45deg, rgba(224, 163, 255, 0.1), rgba(255, 105, 180, 0.1));
     z-index: 1;
-    backdrop-filter: blur(1px);
+    backdrop-filter: blur(0px);
     transition: all 0.4s ease;
+}
+
+.feature-visual img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
 }
 
 .feature-visual:hover::before {
