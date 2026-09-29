@@ -124,7 +124,7 @@ function createQuantumParticle() {
     particle.style.position = 'fixed';
     particle.style.width = Math.random() * 4 + 1 + 'px';
     particle.style.height = particle.style.width;
-    particle.style.background = ['#00ffff', '#ff0080', '#8000ff'][Math.floor(Math.random() * 3)];
+    particle.style.background = ['#60a5fa', '#2dd4bf', '#2563eb'][Math.floor(Math.random() * 3)];
     particle.style.borderRadius = '50%';
     particle.style.left = Math.random() * 100 + '%';
     particle.style.top = '100vh';
@@ -205,19 +205,19 @@ if (contactForm) {
 
                 setTimeout(() => {
                     submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> SEND MESSAGE';
-                    submitBtn.style.background = 'linear-gradient(45deg, #00ffff, #ff0080)';
+                    submitBtn.style.background = 'linear-gradient(135deg, #2563eb, #0f766e)';
                     submitBtn.disabled = false;
                 }, 5000);
             }, (err) => {
                 // Error state
                 console.error('EmailJS Error:', err);
                 submitBtn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> ERROR: TRY AGAIN';
-                submitBtn.style.background = 'linear-gradient(45deg, #ff0000, #ff6b8b)';
+                submitBtn.style.background = 'linear-gradient(135deg, #b91c1c, #f97316)';
                 submitBtn.disabled = false;
 
                 setTimeout(() => {
                     submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> SEND MESSAGE';
-                    submitBtn.style.background = 'linear-gradient(45deg, #00ffff, #ff0080)';
+                    submitBtn.style.background = 'linear-gradient(135deg, #2563eb, #0f766e)';
                 }, 5000);
             });
     });
