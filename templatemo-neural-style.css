@@ -3316,6 +3316,47 @@ footer {
     letter-spacing: 0.08em;
 }
 
+@media (max-width: 768px) {
+    .features-container {
+        width: 100%;
+        max-width: none;
+        padding: 0 16px;
+    }
+
+    .feature-row,
+    .feature-row:nth-child(even) {
+        width: 100%;
+        min-height: 0;
+        gap: 24px;
+    }
+
+    .feature-content,
+    .feature-row .feature-content {
+        width: 100% !important;
+        max-width: none;
+        min-width: 0;
+        flex: 1 1 auto !important;
+        padding: 28px 20px !important;
+    }
+
+    .feature-content h3 {
+        font-size: clamp(1.15rem, 5vw, 1.8rem) !important;
+        line-height: 1.25;
+        overflow-wrap: anywhere;
+    }
+
+    .feature-content p {
+        font-size: 1rem !important;
+        line-height: 1.6;
+        overflow-wrap: anywhere;
+    }
+
+    .certifications-grid {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+}
+
 .certification-card > img {
     display: block;
     width: 100%;
