@@ -3357,6 +3357,60 @@ footer {
     }
 }
 
+@media (max-width: 480px) {
+    .badge-scene {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        grid-template-rows: 30px 430px 30px;
+        align-items: center;
+        height: 510px;
+    }
+
+    .badge-role {
+        position: static;
+        align-self: center;
+        animation: none;
+        transform: none;
+        font-size: 0.62rem;
+    }
+
+    .badge-role-designer {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: start;
+    }
+
+    .badge-role-developer {
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: end;
+        font-size: 0.56rem;
+    }
+
+    .badge-role-creator {
+        grid-column: 1;
+        grid-row: 3;
+        justify-self: start;
+    }
+
+    .badge-role-tutor {
+        grid-column: 2;
+        grid-row: 3;
+        justify-self: end;
+    }
+
+    .profile-badge {
+        grid-column: 1 / 3;
+        grid-row: 2;
+        position: relative;
+        top: auto;
+        left: auto;
+        justify-self: center;
+        transform: none;
+        animation: none;
+    }
+}
+
 .certification-card > img {
     display: block;
     width: 100%;
@@ -3393,6 +3447,117 @@ footer {
     font-size: 0.9rem;
     font-weight: 700;
     text-decoration: none;
+}
+
+/* Responsive technical skills cards and rating bars */
+.hexagon-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+    align-items: stretch;
+    gap: 24px;
+    max-width: 1180px;
+    padding: 0 20px;
+}
+
+.hexagon {
+    width: 100%;
+    max-width: 220px;
+    height: 260px;
+    margin: 0 auto;
+}
+
+.hexagon-inner,
+.hexagon:hover .hexagon-inner {
+    transform: none;
+    border-radius: 12px;
+    padding: 28px 20px;
+}
+
+.hexagon-icon,
+.hexagon h4,
+.hexagon p,
+.hexagon:hover .hexagon-icon,
+.hexagon:hover h4,
+.hexagon:hover p {
+    transform: none;
+}
+
+.hexagon p {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+}
+
+.hexagon .skill-level {
+    width: 100%;
+    min-height: 30px;
+    margin-top: auto !important;
+}
+
+.hexagon .skill-level > div {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 5px !important;
+    margin-top: 12px !important;
+}
+
+.hexagon .skill-level > div > div {
+    flex: 1 1 0;
+    width: auto !important;
+    max-width: 28px;
+    height: 7px !important;
+    min-height: 7px;
+    border-radius: 2px;
+}
+
+.skill-bars {
+    width: 100%;
+    justify-content: center;
+    gap: 5px;
+    margin-top: auto;
+}
+
+.skill-bars span {
+    flex: 1 1 0;
+    max-width: 28px;
+    height: 7px;
+    border-radius: 2px;
+}
+
+@media (max-width: 520px) {
+    .showcase {
+        padding: 72px 0;
+    }
+
+    .hexagon-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+        padding: 0 16px;
+    }
+
+    .hexagon {
+        max-width: 100%;
+        height: 250px;
+    }
+
+    .hexagon-inner,
+    .hexagon:hover .hexagon-inner {
+        padding: 24px 20px;
+    }
+
+    .hexagon-icon {
+        margin-bottom: 12px;
+    }
+
+    .hexagon h4 {
+        margin-bottom: 8px;
+        font-size: 1.15rem;
+    }
+
+    .hexagon p {
+        font-size: 0.9rem;
+    }
 }
 
 .project-link:hover {
